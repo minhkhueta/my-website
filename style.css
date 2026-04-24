@@ -1,0 +1,315 @@
+/* ============================================
+   BASE
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #1a1a1a;
+  background: #fafaf8;
+}
+
+a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem; /* ✏️ CUSTOMIZE — increase/decrease spacing */
+  border-bottom: 1px solid #e8e8e4;
+  position: sticky;
+  top: 0;
+  background: #fafaf8; /* ✏️ CUSTOMIZE — match your body background */
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  font-weight: 400; /* ✏️ CUSTOMIZE — your name style */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* ✏️ CUSTOMIZE — space between nav links */
+}
+
+nav ul li a {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #888; /* ✏️ CUSTOMIZE — nav link color */
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #1a1a1a; /* ✏️ CUSTOMIZE — nav link hover color */
+  text-decoration: none;
+}
+
+
+/* ============================================
+   HERO
+   ============================================ */
+
+#hero {
+  padding: 6rem 2rem; /* ✏️ CUSTOMIZE — top/bottom spacing */
+  max-width: 680px; /* ✏️ CUSTOMIZE — how wide the content stretches */
+  margin: 0 auto;
+}
+
+#hero h1 {
+  font-size: 2.8rem; /* ✏️ CUSTOMIZE — make bigger or smaller */
+  margin-bottom: 1.2rem;
+  color: #1a1a1a;
+}
+
+#hero p {
+  font-size: 1.1rem;
+  color: #666; /* ✏️ CUSTOMIZE — subtitle color */
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+#hero a {
+  display: inline-block;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+#hero a:hover {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+
+/* ============================================
+   SHARED SECTION STYLES
+   ============================================ */
+
+section {
+  padding: 5rem 2rem; /* ✏️ CUSTOMIZE — spacing between sections */
+  max-width: 680px; /* ✏️ CUSTOMIZE — content width, keep same as hero */
+  margin: 0 auto;
+  border-bottom: 1px solid #e8e8e4;
+}
+
+section h2 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #aaa; /* ✏️ CUSTOMIZE — section label color */
+  margin-bottom: 2.5rem;
+}
+
+
+/* ============================================
+   ABOUT
+   ============================================ */
+
+#about p {
+  font-size: 1.05rem;
+  color: #444; /* ✏️ CUSTOMIZE — about text color */
+  margin-bottom: 1.2rem;
+  max-width: 560px;
+}
+
+
+/* ============================================
+   PORTFOLIO
+   ============================================ */
+
+.portfolio-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* ✏️ CUSTOMIZE — space between cards */
+}
+
+.card {
+  padding: 1.8rem; /* ✏️ CUSTOMIZE — inner card spacing */
+  border: 1px solid #e8e8e4;
+  border-radius: 4px; /* ✏️ CUSTOMIZE — corner roundness, 0 = sharp */
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: #bbb; /* ✏️ CUSTOMIZE — card hover border color */
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #888; /* ✏️ CUSTOMIZE — card description color */
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.card a {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1px;
+  transition: border-color 0.2s;
+}
+
+.card a:hover {
+  border-color: #1a1a1a;
+  text-decoration: none;
+}
+
+
+/* ============================================
+   BLOG
+   ============================================ */
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* ✏️ CUSTOMIZE — space between blog posts */
+}
+
+.blog-post {
+  display: grid;
+  grid-template-columns: 100px 1fr; /* ✏️ CUSTOMIZE — date column width */
+  gap: 1rem;
+  align-items: start;
+}
+
+.date {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.8rem;
+  color: #aaa; /* ✏️ CUSTOMIZE — date color */
+  padding-top: 4px;
+  letter-spacing: 0.03em;
+}
+
+.blog-post h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: #1a1a1a;
+}
+
+.blog-post p {
+  font-size: 0.9rem;
+  color: #888; /* ✏️ CUSTOMIZE — blog summary color */
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.blog-post a {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #aaa;
+  transition: color 0.2s;
+}
+
+.blog-post a:hover {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+
+/* ============================================
+   CONTACT
+   ============================================ */
+
+#contact p {
+  font-size: 1.05rem;
+  color: #666; /* ✏️ CUSTOMIZE — contact text color */
+  margin-bottom: 1.5rem;
+  max-width: 480px;
+}
+
+#contact a {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+#contact a:hover {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.8rem;
+  color: #bbb; /* ✏️ CUSTOMIZE — footer text color */
+  letter-spacing: 0.04em;
+}
+
+
+/* ============================================
+   RESPONSIVE — mobile friendly
+   ============================================ */
+
+@media (max-width: 600px) {
+  #hero h1 {
+    font-size: 2rem; /* ✏️ CUSTOMIZE — mobile heading size */
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  .blog-post {
+    grid-template-columns: 1fr;
+  }
+
+  .date {
+    margin-bottom: -1rem;
+  }
+}
