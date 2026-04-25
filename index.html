@@ -8,6 +8,26 @@
     <!-- ví dụ với Cormorant Garamond -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
   </head>
+
+  <script>
+  let lastScroll = 0;
+
+  window.addEventListener('scroll', function() {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll > lastScroll && currentScroll > 80) {
+      // đang scroll xuống → ẩn nav
+      document.querySelector('nav').classList.add('hidden');
+    } else {
+      // đang scroll lên → hiện nav
+      document.querySelector('nav').classList.remove('hidden');
+    }
+
+    lastScroll = currentScroll;
+  });
+</script>
+
+
   <body>
 
     <!-- NAV -->

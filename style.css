@@ -58,9 +58,15 @@ nav {
   right: 0;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* ✏️ change from center to flex-start */
-  padding: 2rem 2rem;      /* ✏️ increase top/bottom padding to give more room */
+  align-items: flex-start;
+  padding: 2rem 2rem;
   z-index: 100;
+  background: #f5f4f0;
+  transition: transform 0.3s ease; /* ✏️ smooth animation */
+}
+
+nav.hidden {
+  transform: translateY(-100%); /* đẩy nav lên trên, biến mất */
 }
 
 .nav-left {
