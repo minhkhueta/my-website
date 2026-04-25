@@ -111,8 +111,8 @@ nav.hidden {
    ============================================ */
 
 section {
-  /* ✏️ This pushes content to the right half of the page like the reference */
   padding: 8rem 2rem 6rem 40%;
+  scroll-margin-top: 100px; /* ✏️ đây là key — khi click nav link, dừng cách nav 100px */
 }
 
 .section-content {
