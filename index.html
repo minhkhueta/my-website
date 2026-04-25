@@ -4,111 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>minhkhueta</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <!-- ví dụ với Cormorant Garamond -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
   </head>
-
   <body>
-    <!-- ========== -->
-    <!-- navigation -->
-    <!-- ========== -->
+
+    <!-- NAV -->
     <nav>
-        <div class="logo">minh khue ta</div>
-        <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-        </ul>
+      <div class="nav-left">
+        <div class="logo-main" style="font-size: 24px;">Minh Khue Ta</div>
+        <div class="logo-sub">Ho Chi Minh City</div>
+      </div>
+      <div class="nav-right">
+        <a href="#profile">Profile</a>
+        <a href="career.html">Career</a>
+        <a href="writing.html">Writing</a>
+        <a href="interest.html">Interests</a>  <!-- ✏️ links to a new page -->
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
 
-    <!-- ==== -->
-    <!-- hero -->
-    <!-- ==== -->
-    <section id="hero">
-        <h1>Hi, I'm Your Name</h1>
-        <p>I write equity research and explore ideas at the intersection of markets, technology, and life.</p>
-        <a href="#portfolio">See my work</a>
+    <!-- PROFILE -->
+    <section id="profile">
+      <div class="section-content">
+
+        <h2>Profile</h2>
+
+        <div class="profile-photo">
+          <!-- ✏️ CUSTOMIZE: replace with your actual photo -->
+          <img src="profile-photo.jpg" alt="Your Name" class="profile-photo-img" style="width:120px; height:160px; object-fit:cover;" />
+        </div>
+
+        <p class="profile-name">Minh Khue Ta</p>
+
+        <div class="timeline">
+          <!-- ✏️ CUSTOMIZE: replace with your actual timeline -->
+          <div class="timeline-row">
+            <span class="timeline-year">2002</span>
+            <span class="timeline-desc">Born in Quy Nhon, Vietnam</span>
+          </div>
+
+          <div class="timeline-row">
+            <span class="timeline-year">2024</span>
+            <span class="timeline-desc">Graduated from Ho Chi Minh University of Economics</span>
+          </div>
+          <div class="timeline-row">
+            <span class="timeline-year">Jun 2024</span>
+            <span class="timeline-desc">Started career at Tititada as research analyst</span>
+          </div>
+          <div class="timeline-row">
+            <span class="timeline-year">Nov 2024</span>
+            <span class="timeline-desc">Converted to Equity Analyst at SBB Securities covering Real Estate Industry</span>
+          </div>
+          <div class="timeline-row">
+            <span class="timeline-year">Currently</span>
+            <span class="timeline-desc">Based in Ho Chi Minh City</span>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <!-- ============= -->
-    <!-- About Section -->
-    <!-- ============= -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-        I'm based in Ho Chi Minh City. I write equity research, 
-        think about markets and technology, and document my 
-        hobbies and thoughts along the way.
-        </p>
-        <p>
-        When I'm not analyzing companies, you'll find me 
-        [your hobby here].
-        </p>
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-content">
+        <h2>Contact</h2>
+        <!-- ✏️ CUSTOMIZE: replace with your actual email -->
+        <a href="mailto:minhkhueta.work@gmail.com">minhkhueta.work@gmail.com</a>
+      </div>
     </section>
-    
-    <!-- ================= -->
-    <!-- portfolio section -->
-    <!-- ================= -->
-    <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="portfolio-grid">
-
-      <div class="card">
-        <h3>Equity Research — Company Name</h3>
-        <p>A deep dive into [company] covering valuation, business model, and growth outlook.</p>
-        <a href="#">Read report</a>
-      </div>
-
-      <div class="card">
-        <h3>Equity Research — Company Name</h3>
-        <p>A deep dive into [company] covering valuation, business model, and growth outlook.</p>
-        <a href="#">Read report</a>
-      </div>
-
-      <div class="card">
-        <h3>Equity Research — Company Name</h3>
-        <p>A deep dive into [company] covering valuation, business model, and growth outlook.</p>
-        <a href="#">Read report</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- =============-->
-  <!-- blog section -->
-  <!-- =============-->
-  <section id="blog">
-    <h2>Blog & Thoughts</h2>
-    <div class="blog-list">
-
-      <div class="blog-post">
-        <span class="date">April 2026</span>
-        <h3>Your Post Title Here</h3>
-        <p>A short one or two sentence summary of what this post is about.</p>
-        <a href="#">Read more</a>
-      </div>
-
-      <div class="blog-post">
-        <span class="date">March 2026</span>
-        <h3>Your Post Title Here</h3>
-        <p>A short one or two sentence summary of what this post is about.</p>
-        <a href="#">Read more</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- =============== -->
-  <!-- Contact Section -->
-  <!-- =============== -->
-  <section id="contact">
-    <h2>Get in Touch</h2>
-    <p>Whether it's about my research, a collaboration, or just to say hi — feel free to reach out.</p>
-    <a href="mailto:you@email.com">you@email.com</a>
-  </section>
-
-  <footer>
-    <p>© 2026 Your Name</p>
-  </footer>
 
   </body>
 </html>
