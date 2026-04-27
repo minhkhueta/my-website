@@ -1,0 +1,229 @@
+
+/* BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300; /* light — thanh mảnh*/
+  font-size: 14px;
+  line-height: 1.7;
+  background: #f5f4f0;
+  color: #1a1a1a;
+  margin-left: 0.5rem;
+}
+
+.section-desc {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: #aaa;
+  letter-spacing: 0.06em;
+  margin-top: -1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem 2rem;
+  z-index: 100;
+  background: #f5f4f0;
+  transition: transform 0.3s ease; /* ✏️ smooth animation */
+}
+
+nav.hidden {
+  transform: translateY(-100%); /* đẩy nav lên trên, biến mất */
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-main {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.04em;  /* ✅ sửa từ 1em */
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.logo-sub {
+  font-size: 12px;
+  color: #999;
+  letter-spacing: 0.08em;
+  margin-top: 1px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 2rem;
+  padding-top: 2px;
+}
+
+.nav-right a {
+  font-size: 12px;
+  color: #999;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.nav-right a:hover {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+/* SECTION */
+
+section {
+  padding: 4rem 2rem 4rem 40%;
+  scroll-margin-top: 100px;
+}
+
+.section-content {
+  max-width: 560px;
+}
+
+section h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-top: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.section-desc {
+  font-size: 12px;
+  color: #aaa;
+  letter-spacing: 0.06em;
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Khung chứa toàn bộ gallery */
+.photography-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Chia đều thành 2 cột */
+  gap: 1rem; /* Khoảng cách giữa các tấm ảnh */
+  max-width: 560px; /* Khớp với độ rộng các section khác của bạn */
+  width: 100%;
+  margin: 0rem; /* Căn giữa toàn bộ gallery */
+}
+
+/* Từng khung ảnh */
+.photo-card {
+  margin: 0;
+  background: #ffffff;
+  padding: 10px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Hiệu ứng nổi nhẹ */
+  position: relative;
+}
+
+/* Ảnh chụp */
+.photo-card img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none; /* Khóa mọi tương tác chuột */
+  user-select: none;    /* Ngăn bôi đen */
+}
+
+/* Phần chữ bên dưới */
+.photo-card figcaption {
+  margin-top: 0.75rem;
+}
+
+/* Thời gian & Địa điểm (12px) */
+.photo-meta {
+  font-size: 0.75rem;
+  color: #888888;
+}
+
+/* Phần cảm xúc, suy nghĩ */
+.photo-story {
+  font-size: 0.85rem; /* Thu nhỏ một chút để vừa vặn với cột 280px */
+  color: #333333;
+  margin-top: 0.4rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  /* SECTION */
+  section {
+    padding: 2rem 1rem 3rem 1rem; /* ✏️ bỏ 40%, căn đều 2 bên */
+    scroll-margin-top: 120px;
+  }
+
+  footer {
+    padding: 3rem 1rem 2rem 1rem; /* ✏️ match với section */
+  }
+
+  /* NAV */
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.2rem 1.5rem; /* ✏️ giảm padding trên mobile */
+  }
+
+  .nav-right {
+    gap: 1rem;
+    flex-wrap: wrap; /* ✏️ nav links xuống hàng nếu quá dài */
+  }
+
+  /* LOGO */
+  .logo-main {
+    font-size: 20px; /* ✏️ nhỏ hơn trên mobile */
+  }
+
+  /* TIMELINE */
+  .timeline-row {
+    grid-template-columns: 70px 1fr; /* ✏️ cột năm hẹp hơn */
+    gap: 0.8rem;
+  }
+
+  /* LIST */
+  .list-row {
+    grid-template-columns: 70px 1fr;
+    gap: 0.8rem;
+  }
+
+  /* PHOTO */
+  .profile-photo-img {
+    width: 100px;
+    height: 133px;
+  }
+
+  /* SECTION H2 */
+  section h2 {
+    margin-top: 5rem;
+  }

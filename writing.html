@@ -14,11 +14,11 @@
     <nav>
       <div class="nav-left">
         <div class="logo-main">Minh Khue Ta</div>
-        <div class="logo-sub">Ho Chi Minh CIty</div>
+        <div class="logo-sub">Ho Chi Minh City, Vietnam</div>
       </div>
       <div class="nav-right">
         <a href="home.html">Home</a>
-        <a href="career.html">Career</a>
+        <a href="work.html">Work</a>
         <a href="writing.html">Writing</a>
         <a href="interest.html">Interests</a>
         <a href="home.html#contact">Contact</a>
@@ -28,9 +28,10 @@
     <!-- WRITING CONTENT -->
     <section id="writing">
       <div class="section-content">
-
         <h2>Writing & Thoughts</h2>
 
+        <p class="section-desc">This is where I share my views and thoughts on many aspects of life.</p>
+     
         <div class="list">
 
           <div class="list-row">
@@ -52,6 +53,24 @@
         </div>
       </div>
     </section>
+
+    <script>
+      let lastScroll = 0;
+
+      window.addEventListener('scroll', function() {
+        const currentScroll = window.scrollY;
+
+        if (currentScroll > lastScroll && currentScroll > 80) {
+          // đang scroll xuống → ẩn nav
+          document.querySelector('nav').classList.add('hidden');
+        } else {
+          // đang scroll lên → hiện nav
+          document.querySelector('nav').classList.remove('hidden');
+        }
+
+        lastScroll = currentScroll;
+      });
+    </script>
 
   </body>
 </html>
