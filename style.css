@@ -1,40 +1,32 @@
-/* ============================================
-   BASE
-   ============================================ */
-
+/* BASE */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-h1, h2, h3 {
-  font-family: 'Cormorant Garamond', serif;
-}
-
-.logo-main {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 32px;    /* ✏️ now this should work */
-  font-weight: 500;
-  letter-spacing: 1em;
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300; /* light — thanh mảnh*/
+  font-size: 14px;
+  line-height: 1.7;
+  background: #f5f4f0;
   color: #1a1a1a;
-  line-height: 1.2;
+  margin-left: 0.5rem;
 }
 
 .section-desc {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
   font-size: 12px;
   color: #aaa;
   letter-spacing: 0.06em;
-  margin-top: -1.5rem;   /* kéo lên gần h2 hơn */
-  margin-bottom: 2.5rem; /* giữ khoảng cách với nội dung bên dưới */
+  margin-top: -1.5rem;
+  margin-bottom: 2.5rem;
 }
 
-body {
-  background: #f5f4f0;
-  color: #1a1a1a;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.7;
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
 }
 
 a {
@@ -47,10 +39,7 @@ a:hover {
 }
 
 
-/* ============================================
-   NAV
-   ============================================ */
-
+/* NAV */
 nav {
   position: fixed;
   top: 0;
@@ -59,7 +48,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 2rem 2rem;
+  padding: 1.5rem 2rem;
   z-index: 100;
   background: #f5f4f0;
   transition: transform 0.3s ease; /* ✏️ smooth animation */
@@ -75,9 +64,12 @@ nav.hidden {
 }
 
 .logo-main {
-  font-size: 13px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.04em;  /* ✅ sửa từ 1em */
   color: #1a1a1a;
-  letter-spacing: 0.01em;
+  line-height: 1.2;
 }
 
 .logo-sub {
@@ -105,14 +97,11 @@ nav.hidden {
   text-decoration: none;
 }
 
-
-/* ============================================
-   SECTIONS
-   ============================================ */
+/* SECTIONS */
 
 section {
   padding: 4rem 2rem 4rem 40%;
-  scroll-margin-top: 100px; /* ✅ đặt ở đây */
+  scroll-margin-top: 100px;
 }
 
 .section-content {
@@ -120,24 +109,38 @@ section {
 }
 
 section h2 {
-  margin-top: 2.4rem;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 500;
   color: #1a1a1a;
-  margin-bottom: 2rem;
+  margin-top: 2.4rem;
+  margin-bottom: 1rem;
 }
 
+.section-desc {
+  font-size: 12px;
+  color: #aaa;
+  letter-spacing: 0.06em;
+  margin-top: 0rem;
+  margin-bottom: 2.5rem;
+}
 
 /* ============================================
    PROFILE
    ============================================ */
-
 .photo-placeholder {
   width: 120px;
   height: 160px;
   background: #e0ddd8;
   margin-bottom: 1.5rem;
-  /* ✏️ Replace this with an actual <img> tag once you have a photo */
+}
+
+.profile-photo-img {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  margin-bottom: 1.5rem;
 }
 
 .profile-name {
@@ -155,7 +158,6 @@ section h2 {
 
 .timeline-row {
   display: grid;
-  /* ✏️ First column is the year, second is the description */
   grid-template-columns: 100px 1fr;
   gap: 1rem;
   font-size: 13px;
@@ -169,7 +171,6 @@ section h2 {
 .timeline-desc {
   color: #1a1a1a;
 }
-
 
 /* ============================================
    RESEARCH & WRITING LISTS
@@ -211,27 +212,46 @@ section h2 {
   line-height: 1.6;
 }
 
-
 /* ============================================
    CONTACT
    ============================================ */
-
-#contact a {
-  font-size: 14px;
-  color: #1a1a1a;
+.section-content {
+  max-width: 560px;
+  display: flex;          /* ✏️ thêm dòng này */
+  flex-direction: column; /* ✏️ h2 trên, icons dưới */
 }
 
-#contact a:hover {
-  text-decoration: underline;
+.contact-links {
+  display: flex;
+  flex-direction: row;    /* icons nằm ngang cùng hàng */
+  gap: 1.2rem;
+  margin-top: 0.5rem;     /* khoảng cách với h2 */
+  align-items: center;
+}
+
+.contact-links a {
+  color: #999;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.contact-links a:hover {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.contact-links a svg {
+  width: 18px;    /* ✏️ size icon */
+  height: 18px;
+  display: block;
 }
 
 /* ============================================
    FOOTER
    ============================================ */
-
 footer {
   padding: 4rem 2rem 2rem 40%;
-  max-width: 100%;
 }
 
 .footer-disclaimer {
@@ -250,12 +270,11 @@ footer {
 }
 
 /* ============================================
-   RESPONSIVE
+   RESPONSIVE — để cuối cùng, luôn luôn
    ============================================ */
 
 @media (max-width: 768px) {
   section {
-    /* ✏️ On mobile, full width instead of pushed right */
     padding: 6rem 1.5rem 4rem;
   }
 
