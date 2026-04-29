@@ -101,7 +101,7 @@ nav.hidden {
 /* SECTION */
 
 section {
-  padding: 4rem 2rem 4rem 40%;
+  padding: 4rem 2rem 4rem 30%;
   scroll-margin-top: 100px;
 }
 
@@ -126,33 +126,29 @@ section h2 {
 }
 
 /* Khung chứa toàn bộ gallery */
+/* Masonry layout — tự động theo chiều cao ảnh */
 .photography-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Chia đều thành 2 cột */
-  gap: 1rem; /* Khoảng cách giữa các tấm ảnh */
-  max-width: 560px; /* Khớp với độ rộng các section khác của bạn */
+  columns: 2;              /* ✏️ số cột — đổi thành 3 nếu muốn */
+  column-gap: 1rem;
+  max-width: 800px;
   width: 100%;
-  margin: 0rem; /* Căn giữa toàn bộ gallery */
 }
 
-/* Từng khung ảnh */
 .photo-card {
-  margin: 0;
+  break-inside: avoid;     /* quan trọng — ngăn ảnh bị cắt đôi giữa cột */
+  margin-bottom: 1rem;
   background: #ffffff;
   padding: 10px;
   border: 1px solid #eaeaea;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Hiệu ứng nổi nhẹ */
-  position: relative;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-/* Ảnh chụp */
 .photo-card img {
-  position: relative;
   width: 100%;
-  height: auto;
+  height: auto;            /* ✏️ key — chiều cao tự động theo tỷ lệ ảnh gốc */
   display: block;
-  pointer-events: none; /* Khóa mọi tương tác chuột */
-  user-select: none;    /* Ngăn bôi đen */
+  pointer-events: none;
+  user-select: none;
 }
 
 /* Phần chữ bên dưới */
@@ -227,3 +223,9 @@ section h2 {
   section h2 {
     margin-top: 5rem;
   }
+
+  @media (max-width: 768px) {
+  .photography-gallery {
+    columns: 1; /* ✏️ mobile chỉ 1 cột */
+  }
+}
